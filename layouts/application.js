@@ -125,9 +125,8 @@ export default function ApplicationLayout(props) {
             <div className="mt-5 flex-1 flex flex-col">
               <nav className="flex-1 px-2 pb-4 space-y-1">
                 {navigation.map((item) => (
-                  <Link href={item.href}>
+                  <Link href={item.href} key={item.name}>
                     <a
-                      key={item.name}
                       className={classNames(
                         router.asPath === item.href ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-600',
                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
